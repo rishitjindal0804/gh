@@ -51,18 +51,18 @@ function draw(){
     tower.y= 300;
       //   tower.addSound("spooky1",spooky);
           }
-if (keyDown("up"))||touches.lenth>0)&&ghost.y>=600){
+if (keyDown("up")){
   ghost.velocityY = -12; 
   ghost.changeAnimation("gho",ghost2)
-  touches[];
+  
 }
-      if (keyDown("left")||touches.width<2)&&ghost.y>=300){
+      if (keyDown("left")){
        ghost.velocityX = -7;
-          touches[];
+     
       }
-      if (keyDown("right")||touches.width>2))&&ghost.x>=300{
+      if (keyDown("right")){
          ghost.velocityX = 7;
-          touches[];
+      
       }
       
       
@@ -105,7 +105,7 @@ function spawndoor(){
 doors.velocityY= 3;
    
     //generate random obstacles
-    doors.x= Math.round(random(width-100,width-500));
+    doors.x= Math.round(random(width-50,width-550));
            doors.addImage(door);
           
     
