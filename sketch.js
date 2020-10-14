@@ -31,9 +31,9 @@ function setup(){
  tower = createSprite(width/2,height/2);
 tower.addImage("towe",ghtower);
   tower.velocityY= 3
-  tower.scale = 1.4
+  tower.scale = 1.5
   
-ghost = createSprite(300,300);
+ghost = createSprite(width/2,height/2);
   ghost.addImage("ghos",ghost1)
   ghost.scale=0.3
   
@@ -51,16 +51,18 @@ function draw(){
     tower.y= 300;
       //   tower.addSound("spooky1",spooky);
           }
-if (keyDown("up")){
+if (keyDown("up"))||touches.lenth>0)&&ghost.y>=600){
   ghost.velocityY = -12; 
   ghost.changeAnimation("gho",ghost2)
+  touches[];
 }
-      if (keyDown("left")){
+      if (keyDown("left")||touches.width<2)&&ghost.y>=300){
        ghost.velocityX = -7;
+          touches[];
       }
-      if (keyDown("right")){
+      if (keyDown("right")||touches.width>2))&&ghost.x>=300{
          ghost.velocityX = 7;
-        
+          touches[];
       }
       
       
@@ -86,6 +88,11 @@ if (keyDown("up")){
      doosGroup.setVelocityYEach(0);
 
     doosGroup.setLifetimeEach(-1)
+   
+   text("press R to restart",width/2,height/2)
+   if(keyDown("r"){
+      gameState =   PLAY;
+      }
    }
   
   
@@ -98,7 +105,7 @@ function spawndoor(){
 doors.velocityY= 3;
    
     //generate random obstacles
-    doors.x= Math.round(random(100,500));
+    doors.x= Math.round(random(width-100,width-500));
            doors.addImage(door);
           
     
